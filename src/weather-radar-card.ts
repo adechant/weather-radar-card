@@ -625,13 +625,37 @@ export class WeatherRadarCard extends LitElement implements LovelaceCard {
       <style>
         ${this.styles}
       </style>
-      <ha-card class="type-iframe">
+      <ha-card class="type-iframe" @click="${this._handleClick}">
         ${cardTitle}
         <div id="root" style="padding-top: ${padding}">
           <iframe srcdoc=${doc} scrolling="no"></iframe>
         </div>
       </ha-card>
     `;
+  }
+
+  private _handleClick() {
+    const actionConfig = {
+      entity: this._config.entity,
+      tap_action: {
+        action: this._config.tap_action ? this._config.tap_action : "more-info",
+        navigation_path: this._config.navigation_path,
+        url_path: this._config.url_path,
+        data: this._config.data,
+        pipeline_id: this._config.pipeline_id,
+      }
+    };
+
+    const event = new Event("hass-action", {
+      bubbles: true,
+      composed: true,
+    });
+
+    event['detail'] = {
+      config: actionConfig,
+      action: "tap",
+    };
+    dispatchEvent(event);
   }
 
   private showWarning(warning: string): TemplateResult {
