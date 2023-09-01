@@ -5,7 +5,7 @@ import babel from 'rollup-plugin-babel';
 import serve from 'rollup-plugin-serve';
 import { terser } from 'rollup-plugin-terser';
 import json from '@rollup/plugin-json';
-import ignore from './rollup-plugins/ignore';
+import ignore from 'rollup-plugins/ignore';
 import { ignoreTextfieldFiles } from './elements/ignore/textfield';
 import { ignoreSelectFiles } from './elements/ignore/select';
 import { ignoreSwitchFiles } from './elements/ignore/switch';
@@ -33,8 +33,6 @@ export default {
         'Access-Control-Allow-Origin': '*',
       },
     }),
-    ignore({
-      files: [...ignoreTextfieldFiles, ...ignoreSelectFiles, ...ignoreSwitchFiles].map((file) => require.resolve(file)),
-    }),
+    ignore([...ignoreTextfieldFiles, ...ignoreSelectFiles, ...ignoreSwitchFiles]),
   ],
 };

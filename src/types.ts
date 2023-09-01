@@ -25,7 +25,6 @@ export interface WeatherRadarCardConfig extends LovelaceCardConfig {
   show_error?: boolean;
   test_gui?: boolean;
   show_header_toggle?: boolean;
-  entity: undefined;
   tap_action: undefined;
   navigation_path:  undefined;
   url_path:  undefined;
