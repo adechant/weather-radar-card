@@ -22,7 +22,6 @@ const serveopts = {
 };
 
 const plugins = [
-  nodeResolve({}),
   commonjs(),
   typescript(),
   json(),
