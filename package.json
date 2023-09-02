@@ -1,7 +1,7 @@
 {
   "name": "weather-radar-card",
   "type": "module",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "A rain radar card using data from RainViewer",
   "keywords": [
     "home-assistant",

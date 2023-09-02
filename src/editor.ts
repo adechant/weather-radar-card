@@ -5,11 +5,6 @@ import { HomeAssistant, fireEvent, LovelaceCardEditor } from 'custom-card-helper
 import { ScopedRegistryHost } from '@lit-labs/scoped-registry-mixin';
 import { WeatherRadarCardConfig } from './types';
 import { customElement, property, state } from 'lit/decorators';
-import { formfieldDefinition } from '../elements/formfield';
-import { selectDefinition } from '../elements/select';
-import { switchDefinition } from '../elements/switch';
-import { textfieldDefinition } from '../elements/textfield';
-import { sliderDefinition } from '../elements/slider';
 
 @customElement('weather-radar-card-editor')
 export class WeatherRadarCardEditor extends ScopedRegistryHost(LitElement) implements LovelaceCardEditor {
@@ -20,14 +15,6 @@ export class WeatherRadarCardEditor extends ScopedRegistryHost(LitElement) imple
   @state() private _helpers?: any;
 
   private _initialized = false;
-
-  static elementDefinitions = {
-    ...textfieldDefinition,
-    ...selectDefinition,
-    ...switchDefinition,
-    ...formfieldDefinition,
-    ...sliderDefinition,
-  };
 
   public setConfig(config: WeatherRadarCardConfig): void {
     this._config = config;

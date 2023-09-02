@@ -33,6 +33,5 @@ export default {
         'Access-Control-Allow-Origin': '*',
       },
     }),
-    ignore([...ignoreTextfieldFiles, ...ignoreSelectFiles, ...ignoreSwitchFiles]),
   ],
 };
