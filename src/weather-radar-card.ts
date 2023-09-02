@@ -635,6 +635,7 @@ export class WeatherRadarCard extends LitElement implements LovelaceCard {
   }
 
   private _handleClick() {
+    console.info('Clicked map');
     const actionConfig = {
       entity: this._config.entity,
       tap_action: {

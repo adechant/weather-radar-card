@@ -257,7 +257,7 @@ const se=e=>t=>"function"==typeof t?((e,t)=>(customElements.define(e,t),t))(e,t)
           <iframe srcdoc=${e} scrolling="no"></iframe>
         </div>
       </ha-card>
-    `}_handleClick(){const e={entity:this._config.entity,tap_action:{action:this._config.tap_action?this._config.tap_action:"more-info",navigation_path:this._config.navigation_path,url_path:this._config.url_path,data:this._config.data,pipeline_id:this._config.pipeline_id}},t=new Event("hass-action",{bubbles:!0,composed:!0});t.detail={config:e,action:"tap"},dispatchEvent(t)}showWarning(e){return H`
+    `}_handleClick(){console.info("Clicked map");const e={entity:this._config.entity,tap_action:{action:this._config.tap_action?this._config.tap_action:"more-info",navigation_path:this._config.navigation_path,url_path:this._config.url_path,data:this._config.data,pipeline_id:this._config.pipeline_id}},t=new Event("hass-action",{bubbles:!0,composed:!0});t.detail={config:e,action:"tap"},dispatchEvent(t)}showWarning(e){return H`
       <hui-warning>${e}</hui-warning>
     `}showError(e){const t=document.createElement("hui-error-card");return t.setConfig({type:"error",error:e,origConfig:this._config}),H`
       ${t}
