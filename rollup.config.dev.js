@@ -17,6 +17,7 @@ export default {
     format: 'es',
   },
   plugins: [
+    nodeResolve(),
     typescript(),
     json(),
     babel({
