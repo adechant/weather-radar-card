@@ -251,7 +251,7 @@ const se=e=>t=>"function"==typeof t?((e,t)=>(customElements.define(e,t),t))(e,t)
       <style>
         ${this.styles}
       </style>
-      <ha-card class="type-iframe" @click="${this._handleClick}">
+      <ha-card class="type-iframe" onclick="${this._handleClick}">
         ${i}
         <div id="root" style="padding-top: ${t}">
           <iframe srcdoc=${e} scrolling="no"></iframe>

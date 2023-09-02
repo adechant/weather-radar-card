@@ -625,7 +625,7 @@ export class WeatherRadarCard extends LitElement implements LovelaceCard {
       <style>
         ${this.styles}
       </style>
-      <ha-card class="type-iframe" @click="${this._handleClick}">
+      <ha-card class="type-iframe" onclick="${this._handleClick}">
         ${cardTitle}
         <div id="root" style="padding-top: ${padding}">
           <iframe srcdoc=${doc} scrolling="no"></iframe>

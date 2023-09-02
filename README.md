@@ -17,7 +17,7 @@ Hey dude! Help me out for a couple of :beers: or a :coffee:!
 
 This card uses map tiles of radar data provided by RainViewer. This allows for one continous map that can be zoomed and panned seamlessly. This card allows this to be displayed within Home Assistant. The card allows you create radar loops of up to at least 24 hours.
 
-![Weather Radar card](https://raw.githubusercontent.com/makin-things/weather-radar-card/master/weather-radar-card.gif)
+![Weather Radar card](https://raw.githubusercontent.com/adechant/weather-radar-card/master/weather-radar-card.gif)
 
 ## Options
 
@@ -107,7 +107,7 @@ show_range: false
 
 If you use HACS, the card is now part of the default HACS store.
 
-If you don't use HACS (seriously you should as it makes life so much easier), you can download the required files from [latest releases](https://github.com/makin-things/weather-radar-card/releases). Drop all of the files in `www/community/weather-radar-card` folder in your `config` directory. It should look like this:
+If you don't use HACS (seriously you should as it makes life so much easier), you can download the required files from [latest releases](https://github.com/adechant/weather-radar-card/releases). Drop all of the files in `www/community/weather-radar-card` folder in your `config` directory. It should look like this:
 
 ```
     └── ...
@@ -145,6 +145,6 @@ resources:
     type: module
 ```
 
-[license-shield]: https://img.shields.io/github/license/makin-things/weather-radar-card.svg?style=for-the-badge
-[releases-shield]: https://img.shields.io/github/release/makin-things/weather-radar-card.svg?style=for-the-badge
-[releases]: https://github.com/makin-things/weather-radar-card/releases
+[license-shield]: https://img.shields.io/github/license/adechant/weather-radar-card.svg?style=for-the-badge
+[releases-shield]: https://img.shields.io/github/release/adechant/weather-radar-card.svg?style=for-the-badge
+[releases]: https://github.com/adechant/weather-radar-card/releases
